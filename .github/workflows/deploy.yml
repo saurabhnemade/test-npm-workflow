@@ -47,6 +47,6 @@ jobs:
       - name: Automated Version Bump
         uses: phips28/gh-action-bump-version@master
         env:
-          GITHUB_TOKEN: mytoken_sample
+          GITHUB_TOKEN: ${{ secrets.GH_AUTH_TOKEN }}
         with:
           commit-message: '[CI] Automated Version Bump : update version to {{version}}'
