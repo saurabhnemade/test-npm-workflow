@@ -29,6 +29,7 @@ jobs:
   versioning:
     name: Automated Version Bump
     runs-on: ubuntu-latest
+    needs: build
     if: github.ref == 'refs/heads/master'
 
     steps:
@@ -49,4 +50,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_AUTH_TOKEN }}
         with:
-          commit-message: '[CI] Automated Version Bump : update version to {{version}}'
+          commit-message: '[Skip CI] Automated Version Bump : update version to {{version}}'
