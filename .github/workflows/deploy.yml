@@ -50,4 +50,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_AUTH_TOKEN }}
         with:
-          commit-message: '[CI] Automated Version Bump : update version to {{version}}'
+          commit-message: '[Skip CI] Automated Version Bump : update version to {{version}}'
