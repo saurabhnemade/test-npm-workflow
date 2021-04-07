@@ -26,7 +26,7 @@ jobs:
       - name: Install Node Dependencies
         run: npm install
 
-versioning:
+  versioning:
     name: Automated Version Bump
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
